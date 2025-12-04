@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>ESR Admin Academy Portlet (V3) Linked from microsite holding page</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+
+  </head>
+    
+  <body>
+  <style type="text/css">
+  .NavigationAA {
+    display: block;
+    position: sticky;
+    z-index: 10001;
+  }
+
+  .vetContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vetImage {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px));
+  }
+
+  .grid-item {
+    background-color: white;
+    color: black;
+    padding: 2px;
+  }
+
+  .ImgButtons {
+    width: 100px;
+  }
+
+  .sidenavAA {
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: 8000;
+    top: 0;
+    left: 0;
+    border: thin solid #41b6e6;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0s;
+    padding-top: 100px;
+    width: 100%;
+  }
+
+  .closebtnAA {
+    padding: 0px 5px 8px 36px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #FFFFFF;
+    display: block;
+    transition: 0.3s;
+    align-text: right;
+    position: absolute;
+    right: 20px;
+  }
+
+  .closebtnAA:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenavAA .closebtnAA {
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .Logo {
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+    max-height: 100px;
+  }
+
+  .Nav_Logo {
+    float: left;
+    padding: 10px;
+    max-height: 100px;
+  }
+
+  .NHSEButtons {
+    text-align: left;
+  }
+
+  .dashboard_img {
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 5px;
+  }
+
+  .VetIframe {
+    height: 600px;
+    width: 100%;
+  }
+
+  .LayoutParent {
+    display: grid;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .Layout1 {
+    grid-area: 1 / 1 / 2 / 3;
+    padding: 10px;
+    background-color: #0072c6;
+    Color: white;
+  }
+
+  .Layout2 {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .Layout3 {
+    grid-area: 3 / 1 / 4 / 2;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .Layout4 {
+    grid-area: 3 / 2 / 4 / 3;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .Layout5 {
+    grid-area: 4 / 1 / 5 / 3;
+    padding: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .LayoutParent {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 2px;
+      grid-row-gap: 2px;
+    }
+
+    .Layout1 {
+      grid-area: 1 / 1 / 2 / 2;
+      padding: 10px;
+      background-color: #0072c6;
+      Color: white;
+    }
+
+    .Layout2 {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .Layout3 {
+      grid-area: 4 / 1 / 5 / 2;
+      padding: 10px;
+    }
+
+    .Layout4 {
+      grid-area: 3 / 1 / 4 / 2;
+      padding: 10px;
+    }
+
+    .Layout5 {
+      grid-area: 5 / 1 / 6 / 2;
+      padding: 10px;
+    }
+  }
+</style>
+<div class="vetContainer">
+  <div class="vetItem"><img alt="" class="responsive vetImage" src="https://my.esr.nhs.uk/dashboard/webdav/royal-liverpool-and-broadgreen-hospitals-university-nhst/document_library/Admin%20Academy%20Logo%20V2" /></div>
+
+  <div class="alert alert-primary">
+    <h4 style="text-align:center;">The Admin Academy</h4>
+
+    <p>Click below to find out more and view all patient administration training and resources available via the Admin Academy.</p>
+  </div>
+
+  <div><a class="btn btn-primary btn-block" href="#" onclick="showElementsByID('AA_Home');" role="button">Admin Academy Click here to see more</a></div>
+</div>
+<!-- NavigationAA -->
+
+<div class="NavigationAA">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary "><button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="#" onclick="hideElementsByClass('sidenavAA');showElementsByID('AA_Home');">Home <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="hideElementsByClass('sidenavAA');showElementsByID('AA_SOP');">Standard Operating Procedures (SOP's)</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="hideElementsByClass('sidenavAA');showElementsByID('AA_Catalogue');">Training Module Catalogue</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="hideElementsByClass('sidenavAA');showElementsByID('AA_FAQ');">Frequently Asked Questions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="hideElementsByClass('sidenavAA');showElementsByID('AA_Sharepoint');">Admin Academy Sharepoint</a></li>
+        <li class="nav-item ml-auto">
+          <h1><a class="nav-link closebtnAA" href="#" onclick="hideElementsByClass('sidenavAA');hideElementsByClass('NavigationAA');">x</a></h1>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<!-- Pages -->
+<!-- AA home Page (AA_Home) -->
+
+<div class="sidenavAA" id="AA_Home">
+  <div class="LayoutParent">
+    <div class="Layout1">
+      <h3>The Admin Academy</h3>
+    </div>
+
+    <div class="Layout3"><img alt="" class="img-fluid" src="https://my.esr.nhs.uk/dashboard/webdav/royal-liverpool-and-broadgreen-hospitals-university-nhst/document_library/Admin%20Academy%20Logo%20V2" /></div>
+
+    <div class="Layout4">
+      <p> </p>
+
+      <h3>Patient Administration Admin Academy</h3>
+
+      <p> </p>
+
+      <p>Established in 2022 to develop training and standardisation of Elective Care patient administration processes.<br />
+        <br />
+        Admin teams are pivotal to the management of patient pathways from referral, right through to discharge. The team are passionate about championing admin roles within our Trust and ensuring staff have access to substantial role-based training. Recognising the importance and impact training has on staff morale, performance, patient experience and patient safety.<br />
+        <br />
+        Some of our work includes:
+      </p>
+
+      <ul>
+        <li>Back to basics - Identify areas requiring standardisation</li>
+        <li>Develop standard processes utilising SME knowledge from within the Trust</li>
+        <li>Develop and deliver training against agreed processes (Training delivered via classroom, online, and 1:1)</li>
+        <li>Ongoing check &amp; verify, linking with our Trust Information Quality team to monitor data quality errors</li>
+        <li>Identify themes for continuous improvement.<br />
+          <br />
+          We have also developed the Admin Academy SharePoint to be a central hub for all training documents/resources. Our suite of Standard Operating Procedures (SOP's) and Work Instructions (underpinning each SOP) can be located via the SharePoint.
+          <p> </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- WHat is the Admin Academy and SOP's -->
+
+<div class="sidenavAA" id="AA_SOP">
+  <div class="LayoutParent">
+    <div class="Layout1">
+      <h3>Standard Operating Procedure's</h3>
+    </div>
+
+    <div class="Layout3"><img alt="" class="img-fluid" src="https://my.esr.nhs.uk/dashboard/webdav/royal-liverpool-and-broadgreen-hospitals-university-nhst/document_library/Admin%20Academy%20Logo%20V2" /></div>
+
+    <div class="Layout4">
+      <div class="card-body">
+        <div class="alert alert-info" role="alert">
+          <div id="AA_SOPImportance">
+            <div class="card">
+              <div class="card-header" id="AA_SOPheading0">
+                <h5 class="mb-0"><button aria-controls="AA_SOPcollapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_SOPcollapse0" data-toggle="collapse"></button></h5>
+
+                <p align="center"><button aria-controls="AA_SOPcollapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_SOPcollapse0" data-toggle="collapse">Why are SOPs important?</button></p>
+              </div>
+
+              <div aria-labelledby="AA_SOPheading0" class="collapse" id="AA_SOPcollapse0">
+                <div class="card-body">
+                  <ul>
+                    <li><b>Consistency</b> - If all staff members are following the same SOP's, to ensure we are all following the same standards and processes across the Trust</li>
+                    <li><b>Efficiency</b> - Easy to refer to saving staff members time trying to find answers when faced with difficulties on a particular they can easily refer to the procedures for direction</li>
+                    <li><b>Safety</b> - SOP's support standardisation with patient administration</li>
+                    <li><b>Training and Onboarding</b> - Robust SOP's compliment training for existing staff members and new starters.</li>
+                    <li><b>Compliance</b> - SOPs form a useful tool for supervisors/management to ensure teams are compliant and all following the same expected standard and required role-based responsibilities.</li>
+                    <li><b>Audits and Regulation</b> - Audit inspectors often check SOP's, their frequency of updates and degree of implementation. SOPs should easily acceptable and frequently reviewed and kept up to date.</li>
+                    <li><b>Accountability</b> - SOP's set who is responsible for the steps in a process. This ensures that everyone works to the best of their ability with accountability for their responsibilities.</li>
+                    <li><b>Continuous Improvement</b> - SOP's along with Information Quality measures can be used to measure and evaluate the performance of our Trust. This measurement allows for consistent review and improvement.
+                      <p> </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="AA_ECSOPheading0">
+                <h5 class="mb-0"><button aria-controls="AA_ECSOPcollapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_ECSOPcollapse0" data-toggle="collapse"></button></h5>
+
+                <p align="center"><button aria-controls="AA_ECSOPcollapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_ECSOPcollapse0" data-toggle="collapse">LUHFT Elective Care Admin SOP's</button></p>
+              </div>
+
+              <div aria-labelledby="AA_ECSOPheading0" class="collapse" id="AA_ECSOPcollapse0">
+                <div class="card-body">
+                  <p>The following SOP's will need to be read and a short knowledge check will need to be completed to confirm you have read and understood;</p>
+
+                  <ul>
+                    <li><b>Outpatient Referral and Triage Management</b> - Link for SOP coming soon</li>
+                    <li><b>Outpatient Management of First appointment PTL</b> - Link for SOP coming soon</li>
+                    <li><b>Outpatient Follow Up Waiting List Management </b> - Link for SOP coming soon</li>
+                    <li><b>Outpatient Clinic Scheduling and Template Management</b> - Link for SOP coming soon</li>
+                    <li><b>Outpatient Administration Clinic Management </b> - Link for SOP coming soon</li>
+                    <li><b>Outpatient Outcome Completion and Escalation</b> - Link for SOP coming soon</li>
+                  </ul>
+                  <p>The below are reading materials only<br>
+                    <lu>
+                      <li><b>Patient Initiated Follow Up (PIFU) Master</b> - <a href="https://www.uhliverpool.nhs.uk/application/files/9116/9695/3868/Patient_Initiated_Follow_Up_PIFU_Local_SOP_.pdf" style="color:red;" target="_blank"> - SOP is avilable to read here</a></li>
+                      <li><b>InTouch</b> - <a href="https://www.uhliverpool.nhs.uk/application/files/5117/0557/6721/inTouch_with_Health_Flow_Manager_SOP.pdf" style="color:red;" target="_blank"> - SOP is avilable to read here</a></li>
+                      <li><b>DrDoctor</b> - <a href="https://www.uhliverpool.nhs.uk/application/files/6416/9806/8842/DrDoctor_SOP_.pdf" style="color:red;" target="_blank"> - SOP is avilable to read here</a></li>
+                      <p> </p>
+                      </li>
+                      </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="AA_CSAheading0">
+                <h5 class="mb-0"><button aria-controls="AA_CSAcollapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_CSAcollapse0" data-toggle="collapse"></button></h5>
+
+                <p align="center"><button aria-controls="AA_CSAcollapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_CSAcollapse0" data-toggle="collapse">LUHFT Cancer Services Admin SOPs</button></p>
+              </div>
+
+              <div aria-labelledby="AA_CSAheading0" class="collapse" id="AA_CSAcollapse0">
+                <div class="card-body">
+                  <p>The following SOP's will need to be read and a short knowledge check will need to be completed to confirm you have read and understood;</p>
+
+                  <ul>
+                    <li><b>Administration of the Faster Diagnosis Standard (FDS)</b><a href="www.google.co.uk" style="color:red;" target="_blank"> - please click here to review</a></li>
+                    <li><b>Cancer Clinical Harm Review</b> - Link for training coming soon</li>
+                    <li><b>Cancer MDT Administration</b> - Link for training coming soon</li>
+                    <li><b>Cancer PTL Management SOP</b> - Link for training coming soon
+                      <p> </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Reservists Policy -->
+
+<div class="sidenavAA" id="AA_Catalogue">
+  <div class="LayoutParent">
+    <div class="Layout1">
+      <h3>Training Module Catalogue</h3>
+    </div>
+
+    <div class="Layout3"><img alt="" class="img-fluid" src="https://my.esr.nhs.uk/dashboard/webdav/royal-liverpool-and-broadgreen-hospitals-university-nhst/document_library/Admin%20Academy%20Logo%20V2" /></div>
+
+    <div class="Layout4">
+      <ul>
+        <li><b>Epro Referral Management</b> - Please contact the Admin Academy for further details</li>
+        <li><b>PIFU (Patient Initiated Follow up Training)</b> - Please contact the Admin Academy for further details</li>
+        <li><b>Flow Manager and eOutcomes</b> - Please contact the Admin Academy for further details</li>
+        <li><b>eOutcomes</b> - Please contact the Admin Academy for further details</li>
+        <li><b>i.PM Slot amendment</b> - Please contact the Admin Academy for further details</li>
+        <li><b>i.PM Getting the Basics Right</b> - Please contact the Admin Academy for further details</li>
+        <li><b>RTT (eLearning)</b> - <a href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=H1SUmJ85KMRkXRto-5XdxQ..&amp;params=DdcIL.XuCQGbcybQAWEMHvGLyE.EfkleVgBJYgeYECrjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c" style="color:red;" target="_blank">please click here</a></li>
+        <li><b>RTT (Face-to-Face)</b> - Please contact the Admin Academy for further details</li>
+        <li><b>Cancer Clinical Harm Reviews</b> - Please contact the Admin Academy for further details</li>
+        <li><b>Somerset Cancer Register (SCR) Add Action</b> - Please contact the Admin Academy for further details</li>
+        <li><b>Cancer PTL Management</b>- Please contact the Admin Academy for further details</li>
+        <li><b>Customer Service Awareness</b> - <a href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=BfhRRL74NCBhmLsNx0x7Uw..&params=21C.dICK01uZRxj5QZCT1UoAO1Yaxe.Q-cCjtGTf0lvjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c" style="color:red;" target="_blank">please click here</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- FAQs -->
+
+<div class="sidenavAA" id="AA_FAQ">
+  <div class="LayoutParent">
+    <div class="Layout1">
+      <h3>Frequently Asked Quesiton's</h3>
+    </div>
+
+    <div class="Layout3"><img alt="" class="img-fluid" src="https://my.esr.nhs.uk/dashboard/webdav/royal-liverpool-and-broadgreen-hospitals-university-nhst/document_library/Admin%20Academy%20Logo%20V2" /></div>
+
+    <div class="Layout4">
+      <div class="card-body">
+        <div class="alert alert-info" role="alert">
+          <div id="AA_FAQ1">
+            <div class="card">
+              <div class="card-header" id="AA_FAQ1heading0">
+                <h5 class="mb-0"><button aria-controls="AA_FAQ1collapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_FAQ1collapse0" data-toggle="collapse"></button></h5>
+
+                <p align="center"><button aria-controls="AA_FAQ1collapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_FAQ1collapse0" data-toggle="collapse">How do I contact the Admin Academy?</button></p>
+              </div>
+
+              <div aria-labelledby="AA_FAQ1heading0" class="collapse" id="AA_FAQ1collapse0">
+                <div class="card-body">
+                  <ul>
+                    <li><b>Email: <a href="mailto: adminacademy@liverpoolft.nhs.uk"> adminacademy@liverpoolft.nhs.uk </a> </b></li>
+                    <li><b>Telephone: 0151 529 2037</b>
+                      <p> </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="AA_FAQ2Pheading0">
+                <h5 class="mb-0"><button aria-controls="AA_FAQ2collapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_FAQ2collapse0" data-toggle="collapse"></button></h5>
+
+                <p align="center"><button aria-controls="AA_FAQ2collapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_FAQ2collapse0" data-toggle="collapse">How do I book on a face-to-face training session?</button></p>
+              </div>
+
+              <div aria-labelledby="AA_FAQ2Pheading0" class="collapse" id="AA_FAQ2collapse0">
+                <div class="card-body">
+                  <p> </p>
+
+                  <ul>
+                    <li><b>To book onto any of the Admin Academy face to face training sessions please email the Admin Academy team: <a href="mailto: adminacademy@liverpoolft.nhs.uk"> adminacademy@liverpoolft.nhs.uk </a> </b>
+
+                      <p> </p>
+                    </li>
+                  </ul>
+
+                  <p> </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="AA_FAQ3Pheading0">
+                <h5 class="mb-0"><button aria-controls="AA_FAQ3collapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_FAQ3collapse0" data-toggle="collapse"></button></h5>
+
+                <p align="center"><button aria-controls="AA_FAQ3collapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_FAQ3collapse0" data-toggle="collapse">What happens if I have failed the required pass rate for an Admin Academy e-Learning module?</button></p>
+              </div>
+
+              <div aria-labelledby="AA_FAQ3Pheading0" class="collapse" id="AA_FAQ3collapse0">
+                <div class="card-body">
+                  <p> </p>
+
+                  <ul>
+                    <li><b>e-Learning pass rates are frequently monitored. You will be contacted by the team in due course to attend a face-to-face training session or to receive some additional training support </b>
+
+                      <p> </p>
+                    </li>
+                  </ul>
+
+                  <p> </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="AA_FAQ4Pheading0">
+                <h5 class="mb-0"><button aria-controls="AA_FAQ4collapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_FAQ4collapse0" data-toggle="collapse"></button></h5>
+
+                <p align="center"><button aria-controls="AA_FAQ4collapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_FAQ4collapse0" data-toggle="collapse">Where is the exact location for Admin Academy (Oak House Aintree)?</button></p>
+              </div>
+
+              <div aria-labelledby="AA_FAQ4Pheading0" class="collapse" id="AA_FAQ4collapse0">
+                <div class="card-body">
+                  <p> </p>
+
+                  <ul>
+                    <li><b>To view the site map and location of the Admin Academy Office and Training Room at Aintree <a href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&amp;resp_id=-1&amp;resp_appl_id=-1&amp;security_group_id=0&amp;lang_code=US&amp;oas=B0mWIFYSdRjdiBM6QZsbJA..&amp;params=fJ2LkKPFYGPKRbtH680Ad6L9LkVOL0jz4pNXLnivwavjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c" style="color:red;" target="_blank">please click here</a> </b>
+
+                      <p> </p>
+                    </li>
+                  </ul>
+
+                  <p> </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="AA_FAQ5Pheading0">
+                <h5 class="mb-0"><button aria-controls="AA_FAQ5collapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_FAQ5collapse0" data-toggle="collapse"></button></h5>
+
+                <p align="center"><button aria-controls="AA_FAQ5collapse0" aria-expanded="false" class="btn collapsed ButtonSD btn-block h-100" data-target="#AA_FAQ5collapse0" data-toggle="collapse">Do the Admin Academy offer training at other LUHFT sites?</button></p>
+              </div>
+
+              <div aria-labelledby="AA_FAQ5Pheading0" class="collapse" id="AA_FAQ5collapse0">
+                <div class="card-body">
+                  <p> </p>
+
+                  <ul>
+                    <li><b>Yes, we provide training across all LUHFT sites Royal, Broadgreen, Aintree and Dental Hospital </b></li>
+                    <li><b>We have a dedicated office and training space in Oak House on the Aintree site and when delivering training on other sites we book rooms out as per room availability at the time. </b></li>
+                    <li><b>All training location details are provided in your training calendar invite </b>
+                      <p> </p>
+                    </li>
+                  </ul>
+
+                  <p> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Admin Academy Sharepoint -->
+
+<div class="sidenavAA" id="AA_Sharepoint">
+  <div class="LayoutParent">
+    <div class="Layout1">
+      <h3>Admin Academy SharePoint</h3>
+    </div>
+
+    <div class="Layout3"><img alt="" class="img-fluid" src="https://my.esr.nhs.uk/dashboard/webdav/royal-liverpool-and-broadgreen-hospitals-university-nhst/document_library/Admin%20Academy%20Logo%20V2" /></div>
+
+    <div class="Layout4">
+      <p>Your central hub for all patient administration training documents/resources. You can access the following on our Admin Academy SharePoint:</p>
+
+      <ul>
+        <li>Policies (Elective Care Access Policy and Interpretation and Translation Policy)</li>
+        <li>SOP's</li>
+        <li>RTT (Referral to Treatment) information including clinician guide, clock start reference grid and RTT rules poster).</li>
+        <li>Presentation slides from our face-to-face training sessions</li>
+        <li>Work Instructions (Step by step guides) that support you with completing tasks.
+          <p> </p>
+
+          <p>The Admin Academy SharePoint site can be found here - <a href="https://digitalliverpool.sharepoint.com/sites/AdminAcademy/SitePages/LearningTeamHome.aspx" role="button">Click here to visit</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- End of Pages -->
+<script>
+  function hideElementsByClass(className) {
+    document.querySelectorAll("." + className).forEach(function(element) {
+      element.style.display = "none";
+    });
+  }
+
+  function showElementsByID(IDName) {
+    // Unhide elements by ID
+    document.querySelectorAll("#" + IDName).forEach(function(element) {
+      element.style.display = "inline";
+    });
+    // Unhide elements with class 'NavigationAA'
+    document.querySelectorAll(".NavigationAA").forEach(function(element) {
+      element.style.display = "inline";
+    });
+  }
+  document.onreadystatechange = function() {
+    if (document.readyState == "complete") {
+      var contactWidgetLink = document.querySelector("#mpi_ContactModal").getAttribute("href");
+      document.getElementById("VetPersonalDetails").setAttribute("href", contactWidgetLink);
+    }
+  }
+</script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+  </body>
+  
+</html>
